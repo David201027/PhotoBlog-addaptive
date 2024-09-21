@@ -1,0 +1,39 @@
+:root{
+    // fonts
+    --font-family: 'Playfair Display';
+    --second-family: 'Ubuntu';
+    // colors
+    ---color-main: #03A9F4;
+    ---color-text: #626262;
+    ---color-a: #B4AD9E;
+    ---color-a-header: #7D7D7D;
+}
+
+// fonts
+$font-family: "Playfair Display";
+$second-family: "Ubuntu";
+// colors
+$color-main: #626262;
+$color-second:#7d7d7d;
+$color-third: #b4ad9e;
+$color-hover:#03a9f4;
+
+$fonts: (
+    font-family: "Playfair Display",
+    second-family: "Ubuntu",
+);
+
+$colors: (
+    text:#626262,
+    a-header:#7d7d7d,
+    a:#b4ad9e,
+    main:#03a9f4,
+);
+
+@function getColor($key) {
+    @return map-get($colors, $key);
+}
+
+@function getFont($key) {
+    @return map-get($fonts, $key);
+}
